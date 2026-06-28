@@ -17,11 +17,11 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between">
-        <Link href="/" className="font-bold text-xl">
+        <Link href="/" className="font-bold text-xl text-black">
           CampusNest
         </Link>
 
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center text-black">
           <Link href="/">Home</Link>
 
           <Link href="/properties">Properties</Link>
