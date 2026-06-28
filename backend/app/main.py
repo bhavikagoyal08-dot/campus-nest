@@ -17,14 +17,11 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        'http://localhost:3000',
-        "http://127.0.0.1:3000",
-        "https://campus-nest-eight.vercel.app",
-        "https://www.campus-nest-eight.vercel.app"],
-    allow_credentials = True,
+    allow_origin_regex="https://.*\.vercel\.app",
+    allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"],)
+    allow_headers=["*"],
+)
 
 
 from app.routes.auth import router as auth_router
