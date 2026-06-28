@@ -4,6 +4,7 @@ from sqlalchemy import String
 from sqlalchemy import Float
 from sqlalchemy import Boolean
 from sqlalchemy import ForeignKey
+from sqlalchemy import Text
 
 from app.database import Base
 
@@ -14,17 +15,17 @@ class Property(Base):
     id = Column(Integer, primary_key=True, index=True)
 
     owner_id = Column(
-                Integer,
-                ForeignKey("users.id")
-                )
+        Integer,
+        ForeignKey("users.id")
+    )
 
-    title = Column(String, nullable=False)
+    title = Column(String(255), nullable=False)
 
-    description = Column(String)
+    description = Column(Text)
 
     rent = Column(Float)
 
-    address = Column(String)
+    address = Column(String(255))
 
     wifi = Column(Boolean, default=False)
 
@@ -34,8 +35,8 @@ class Property(Base):
 
     laundry = Column(Boolean, default=False)
 
-    image_url = Column(String,nullable=True)
+    image_url = Column(String(500), nullable=True)
 
     latitude = Column(Float, nullable=True)
-    
+
     longitude = Column(Float, nullable=True)
