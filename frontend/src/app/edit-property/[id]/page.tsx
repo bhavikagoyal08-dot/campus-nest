@@ -98,6 +98,7 @@ export default function EditPropertyPage() {
           <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <input
+                required
                 value={form.title}
                 onChange={(e) =>
                   setForm({
@@ -111,6 +112,7 @@ export default function EditPropertyPage() {
 
               <textarea
                 rows={5}
+                required
                 value={form.description}
                 onChange={(e) =>
                   setForm({
@@ -123,6 +125,7 @@ export default function EditPropertyPage() {
               />
 
               <input
+                required
                 type="number"
                 value={form.rent}
                 onChange={(e) =>
@@ -136,6 +139,7 @@ export default function EditPropertyPage() {
               />
 
               <input
+                required
                 value={form.address}
                 onChange={(e) =>
                   setForm({
@@ -148,6 +152,7 @@ export default function EditPropertyPage() {
               />
 
               <input
+                required
                 value={form.image_url}
                 onChange={(e) =>
                   setForm({

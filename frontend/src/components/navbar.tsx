@@ -15,9 +15,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 border-b bg-white shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between">
-        <Link href="/" className="font-bold text-xl text-black">
+        <Link href="/" className="font-bold text-2xl text-black">
           CampusNest
         </Link>
 
@@ -42,7 +42,7 @@ export default function Navbar() {
               <Link href="/register">Sign Up</Link>
             </>
           ) : (
-            <button onClick={handleLogout} className="border px-4 py-2 rounded">
+            <button onClick={handleLogout} className="border px-2 py-1 rounded">
               Logout
             </button>
           )}

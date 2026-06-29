@@ -73,10 +73,11 @@ export default function AddPropertyPage() {
 
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Property Title
+                  Property Title <span className="text-red-500">*</span>
                 </label>
 
                 <input
+                  required
                   className="
                   w-full
                   px-4
@@ -106,10 +107,11 @@ export default function AddPropertyPage() {
 
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Description
+                  Description <span className="text-red-500">*</span>
                 </label>
 
                 <textarea
+
                   rows={5}
                   className="
                   w-full
@@ -126,6 +128,7 @@ export default function AddPropertyPage() {
                   focus:ring-blue-500
                 "
                   placeholder="Describe your property..."
+                  required 
                   value={form.description}
                   onChange={(e) =>
                     setForm({
@@ -140,10 +143,11 @@ export default function AddPropertyPage() {
 
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Monthly Rent
+                  Monthly Rent <span className="text-red-500">*</span>
                 </label>
 
                 <input
+                  required
                   type="number"
                   className="
                   w-full
@@ -173,10 +177,11 @@ export default function AddPropertyPage() {
 
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Address
+                  Address <span className="text-red-500">*</span>
                 </label>
 
                 <input
+                  required
                   className="
                   w-full
                   px-4
@@ -206,10 +211,11 @@ export default function AddPropertyPage() {
 
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Property Image URL
+                  Property Image URL <span className="text-red-500">*</span>
                 </label>
 
                 <input
+                  required
                   className="
                   w-full
                   px-4
